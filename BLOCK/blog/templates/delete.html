@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container" style="margin-left: 15px; margin-top: 15px;">
+    <div class="card" style="width: 30rem;">
+        <div class="card-body">
+            <h5 class="card-title">Odmítnout recept</h5>
+            <form method="post"> {% csrf_token %}
+                <p>Chсete-li vy odmítnout ten recept: "{{ object.author }}"?</p>
+                {{ form }}
+                <input type="submit" value="Confirm">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

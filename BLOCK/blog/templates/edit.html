@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="card-body" style="width: 18rem;">
+        <h5 class="title-text">Redaktirovat</h5>
+        <p class="card-text"></p>
+        <form action="" method="post">
+            {% csrf_token %}
+            {% for i in form %}
+                <label for="items">{{ i.name }}</label>
+                <p id="items">{{ i }}</p>
+            {% endfor %}
+            <input type="submit" class="btn btn-primary" value="Schranit">
+        </form>
+    </div>
+</div>
+{% endblock %}
