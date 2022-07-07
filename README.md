@@ -1,4 +1,4 @@
-1) About
+1) About\
 My first Django Project of Blog
 
 2) 🚂 How to start my project:\
